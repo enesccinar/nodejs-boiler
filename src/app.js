@@ -1,9 +1,9 @@
-import cors from 'cors';
-import express from 'express'
-import bodyParser from 'body-parser'
-// require('./db/mongoose')
+const cors = require('cors')
+const express = require('express')
+const bodyParser = require('body-parser')
+require('./db/mongoose')
 
-import userRouter from './routers/user'
+const userRouter = require('./routers/user')
 
 const app = express()
 const port = process.env.PORT || 3000
