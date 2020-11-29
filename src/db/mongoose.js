@@ -1,7 +1,7 @@
 const mongoose = require('mongoose')
-require('../utils/config')
 
-mongoose.connect(global.gConfig.database, {
+mongoose.connect(process.env.database, {
+    useUnifiedTopology: true,
     useNewUrlParser: true,
     useCreateIndex: true
 })
